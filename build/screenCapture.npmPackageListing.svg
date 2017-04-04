@@ -1,0 +1,15 @@
+<svg height="190" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="190" fill="#555" width="720"></rect>
+<text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
+<tspan x="10" y="26">  0.  2017-04-04 10:18:37 +0000    35674 byte  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-04 10:18:37 +0000      663 byte  index.js</tspan>
+<tspan x="10" y="58">  2.  2017-04-04 10:18:37 +0000      730 byte  lib/linux.js</tspan>
+<tspan x="10" y="74">  3.  2017-04-04 10:18:37 +0000     9324 byte  lib/macos-trash</tspan>
+<tspan x="10" y="90">  4.  2017-04-04 10:18:37 +0000     1025 byte  lib/macos.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-04 10:18:37 +0000    17408 byte  lib/win-trash.exe</tspan>
+<tspan x="10" y="122">  6.  2017-04-04 10:18:37 +0000      295 byte  lib/win.js</tspan>
+<tspan x="10" y="138">  7.  2017-04-04 10:18:37 +0000     1119 byte  license</tspan>
+<tspan x="10" y="154">  8.  2017-04-04 10:18:37 +0000     2834 byte  package.json</tspan>
+<tspan x="10" y="170">  9.  2017-04-04 10:18:37 +0000     2276 byte  readme.md</tspan>
+</text>
+</svg>

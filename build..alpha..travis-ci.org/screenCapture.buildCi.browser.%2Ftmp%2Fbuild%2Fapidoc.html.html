@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/sindresorhus/trash#readme"
-
-    >trash (v4.0.1)</a>
+    <a href="https://github.com/sindresorhus/trash#readme">trash (v4.0.1)</a>
 </h1>
 <h4>Move files and folders to the trash</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.trash">module trash</a><ol>
 
@@ -173,10 +166,10 @@
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">iterable =&#x3e; {
-	iterable = typeof iterable === &#x27;string&#x27; ? [iterable] : iterable;
+    <li>description and source-code<pre class="apidocCodePre">iterable =&gt; {
+	iterable = typeof iterable === 'string' ? [iterable] : iterable;
 	const paths = globby.sync(Array.from(iterable).map(String), {nonull: true})
-		.map(x =&#x3e; path.resolve(x))
+		.map(x =&gt; path.resolve(x))
 		.filter(pathExists.sync);
 
 	if (paths.length === 0) {
@@ -184,8 +177,8 @@
 	}
 
 	switch (process.platform) {
-		case &#x27;darwin&#x27;: return macos(paths);
-		case &#x27;win32&#x27;: return win(paths);
+		case 'darwin': return macos(paths);
+		case 'win32': return win(paths);
 		default: return linux(paths);
 	}
 }</pre></li>
@@ -201,7 +194,7 @@
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">paths =&#x3e; Promise.all(paths.map(trash))</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">paths =&gt; Promise.all(paths.map(trash))</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -214,7 +207,7 @@
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">paths =&#x3e; {
+    <li>description and source-code<pre class="apidocCodePre">paths =&gt; {
 	if (olderThanMountainLion) {
 		return legacy(paths);
 	}
@@ -248,7 +241,7 @@
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">paths =&#x3e; pify(execFile)(bin, paths)</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">paths =&gt; pify(execFile)(bin, paths)</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -266,7 +259,7 @@
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">paths =&#x3e; Promise.all(paths.map(trash))</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">paths =&gt; Promise.all(paths.map(trash))</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -284,7 +277,7 @@
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">paths =&#x3e; {
+    <li>description and source-code<pre class="apidocCodePre">paths =&gt; {
 	if (olderThanMountainLion) {
 		return legacy(paths);
 	}
@@ -326,7 +319,7 @@
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">paths =&#x3e; pify(execFile)(bin, paths)</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">paths =&gt; pify(execFile)(bin, paths)</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -339,3 +332,4 @@
     ]
 </div>
 </div>
+</body></html>

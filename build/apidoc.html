@@ -61,12 +61,275 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.trash">module trash</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.trash.trash">
+            function <span class="apidocSignatureSpan"></span>trash
+            <span class="apidocSignatureSpan">(Array.from(iterable)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.trash.linux">
+            function <span class="apidocSignatureSpan">trash.</span>linux
+            <span class="apidocSignatureSpan">(paths.map(trash)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.trash.macos">
+            function <span class="apidocSignatureSpan">trash.</span>macos
+            <span class="apidocSignatureSpan">(olderThanMountainLion)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.trash.toString">
+            function <span class="apidocSignatureSpan">trash.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.trash.win">
+            function <span class="apidocSignatureSpan">trash.</span>win
+            <span class="apidocSignatureSpan">(execFile)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.trash.linux">module trash.linux</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.trash.linux.linux">
+            function <span class="apidocSignatureSpan">trash.</span>linux
+            <span class="apidocSignatureSpan">(paths.map(trash)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.trash.macos">module trash.macos</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.trash.macos.macos">
+            function <span class="apidocSignatureSpan">trash.</span>macos
+            <span class="apidocSignatureSpan">(olderThanMountainLion)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.trash.toString">module trash.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.trash.toString.toString">
+            function <span class="apidocSignatureSpan">trash.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.trash.win">module trash.win</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.trash.win.win">
+            function <span class="apidocSignatureSpan">trash.</span>win
+            <span class="apidocSignatureSpan">(execFile)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.trash" id="apidoc.module.trash">module trash</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.trash.trash" id="apidoc.element.trash.trash">
+        function <span class="apidocSignatureSpan"></span>trash
+        <span class="apidocSignatureSpan">(Array.from(iterable)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">iterable =&#x3e; {
+	iterable = typeof iterable === &#x27;string&#x27; ? [iterable] : iterable;
+	const paths = globby.sync(Array.from(iterable).map(String), {nonull: true})
+		.map(x =&#x3e; path.resolve(x))
+		.filter(pathExists.sync);
+
+	if (paths.length === 0) {
+		return Promise.resolve();
+	}
+
+	switch (process.platform) {
+		case &#x27;darwin&#x27;: return macos(paths);
+		case &#x27;win32&#x27;: return win(paths);
+		default: return linux(paths);
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.trash.linux" id="apidoc.element.trash.linux">
+        function <span class="apidocSignatureSpan">trash.</span>linux
+        <span class="apidocSignatureSpan">(paths.map(trash)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">paths =&#x3e; Promise.all(paths.map(trash))</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.trash.macos" id="apidoc.element.trash.macos">
+        function <span class="apidocSignatureSpan">trash.</span>macos
+        <span class="apidocSignatureSpan">(olderThanMountainLion)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">paths =&#x3e; {
+	if (olderThanMountainLion) {
+		return legacy(paths);
+	}
+
+	return pify(execFile)(bin, paths);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.trash.toString" id="apidoc.element.trash.toString">
+        function <span class="apidocSignatureSpan">trash.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.trash.win" id="apidoc.element.trash.win">
+        function <span class="apidocSignatureSpan">trash.</span>win
+        <span class="apidocSignatureSpan">(execFile)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">paths =&#x3e; pify(execFile)(bin, paths)</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.trash.linux" id="apidoc.module.trash.linux">module trash.linux</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.trash.linux.linux" id="apidoc.element.trash.linux.linux">
+        function <span class="apidocSignatureSpan">trash.</span>linux
+        <span class="apidocSignatureSpan">(paths.map(trash)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">paths =&#x3e; Promise.all(paths.map(trash))</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.trash.macos" id="apidoc.module.trash.macos">module trash.macos</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.trash.macos.macos" id="apidoc.element.trash.macos.macos">
+        function <span class="apidocSignatureSpan">trash.</span>macos
+        <span class="apidocSignatureSpan">(olderThanMountainLion)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">paths =&#x3e; {
+	if (olderThanMountainLion) {
+		return legacy(paths);
+	}
+
+	return pify(execFile)(bin, paths);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.trash.toString" id="apidoc.module.trash.toString">module trash.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.trash.toString.toString" id="apidoc.element.trash.toString.toString">
+        function <span class="apidocSignatureSpan">trash.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.trash.win" id="apidoc.module.trash.win">module trash.win</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.trash.win.win" id="apidoc.element.trash.win.win">
+        function <span class="apidocSignatureSpan">trash.</span>win
+        <span class="apidocSignatureSpan">(execFile)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">paths =&#x3e; pify(execFile)(bin, paths)</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

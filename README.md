@@ -1,6 +1,6 @@
 # npmdoc-trash
 
-#### api documentation for  [trash (v4.0.1)](https://github.com/sindresorhus/trash#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-trash.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-trash) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-trash.svg)](https://travis-ci.org/npmdoc/node-npmdoc-trash)
+#### basic api documentation for  [trash (v4.0.1)](https://github.com/sindresorhus/trash#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-trash.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-trash) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-trash.svg)](https://travis-ci.org/npmdoc/node-npmdoc-trash)
 
 #### Move files and folders to the trash
 
@@ -98,7 +98,8 @@
     "version": "4.0.1",
     "xo": {
         "esnext": true
-    }
+    },
+    "bin": {}
 }
 ```
 
